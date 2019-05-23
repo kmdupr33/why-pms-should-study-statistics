@@ -1,0 +1,78 @@
+[meta title:"Why PMs Should Study Statistics" description:"An Interactive Essay" /]
+
+[Header
+  fullWidth:true
+  title:"Why PMs Should Study Statistics"
+  subtitle:"An Interactive Essay"
+  author:"Matt Dupree, PM @ UniKey"
+  authorLink:"https://philosophicalhacker.com"
+  date:`(new Date()).toDateString()`
+  background:"#f4b042"
+  color:"#ffffff"
+   /]
+
+[Aside]
+(1) _Inspired: How to build tech products users love_, Marty Cagan, 51.
+[/Aside]
+
+Marty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically [every ](https://www.productplan.com/books-for-product-managers/) [recommended ](https://medium.com/@sebastienphl/my-product-management-reading-list-2017-cb874975c635) [reading ](http://www.cleverpm.com/2015/09/30/a-product-management-reading-list/) [list](https://productcoalition.com/my-top-5-reads-for-product-managers-216c3186b0e4) for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
+
+To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique that hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking, along with naive readings of commonly recommended product managment books like _Good to Great_ and _How Google Works_ can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and product-related revenue.
+
+[Aside]
+(2) The interactivity is powered by [Idyll](https://idyll-lang.org/), a markdown-like language for creating interactive articles.
+[/Aside]
+
+Statistics can be tedious, so I've tried to weave in some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/] This interactivity means that this essay isn't great for reading on a mobile device. If you're reading this on a phone, my recommendation is that you bookmark it and come back later.
+
+## Misleading Cohort Analyses: Statistics for Understanding Analytics
+
+[Aside]
+(3) This is actually a cohort analysis of weekly retention on my blog. Apparently, my writing isn't that interesting. 😉
+
+(4) Fabric’s graph looks a little different and it only tracks retention, but its still a cohort analysis.
+[/Aside]
+
+If you’ve ever looked at analytics for software products, you’ve probably run across a graph that looks like this:
+
+![cohort analysis graph](static/images/cohort-analysis.png)
+
+Graphs like this one depict cohort analyses.[Footnote number:3/] This particular graph is from Google Analytics. Apple also has one for app analytics. So does Fabric.[Footnote number: 4/]
+
+Cohort analyses can be very useful. For example, Eric Reis, in _The Lean Startup_, recounts how cohort analysis helped his startup realize that their efforts at improving their product weren't working:
+
+[Aside]
+(5) Eric Reis, The Lean Startup, 140-141
+[/Aside]
+
+[blockquote]Thanks to the power of cohort analysis, we could not blame this failure on...external market conditions, or any other excuse. Each cohort represented an independent report card and try as we might, we were getting straight C's.[Footnote number:5/][/blockquote]
+
+Although cohort analyses are often useful, they're definitely not perfect ways of tracking progress in product development. Sometimes this is fine. We aren't always looking for perfect inferences that our product changes are driving better metrics. Sometimes we just settle for evidence that _suggests_ the inference. But, if we're looking for solid inferences, traditional cohort analyses can fall short in ways we may not even realize if we don't have a basic understanding of statistics.
+
+Let's look at an example. Suppose your a product manager for a fitness app and you've got a product that you'd like to start iterating on. You're a good project manager, however, so you decide you're going to "experiment" with a new feature and see how the introduction of that feature affects engagement using cohort analysis.
+
+[var name:"feature" value:"your feature" /]
+[var name:"shippedFeature" value: false /]
+Name your feature and click "Ship it" to see the analytics: [TextInput value:feature /]
+[button onClick:`shippedFeature = true`]Ship it[/button]
+[Conditional if:`!shippedFeature`]
+[div style:`{
+  height: '100px',
+  background: '#f4b042'
+}`/]
+[/Conditional]
+[Conditional if: `shippedFeature`]
+[cohort feature:`feature`/]
+[/Conditional]
+
+If you're looking at this cohort analysis, would you conclude that your new feature has improved your product? It shouldn't. The up-tick might be explained by the fact that on cohort was active closer to the holidays when they were thinking more about a fitness related new year's resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven't.
+
+[Aside]
+I've written about how we can avoid this problem with cohort analyses [here](https://www.philosophicalhacker.com/post/better-cohort-analysis/).
+[/Aside]
+
+So, statistics gives us insight into potential issues with the inferences we may draw from popular analytics tools. It also can give us hints as to how we can resolve these issues. Both of these skills make us better product managers.
+
+## Misleading Business Books: Statistics for Understanding Organizational Dynamics
+
+
