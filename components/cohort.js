@@ -1,21 +1,25 @@
 import React from "react";
 import { Table } from "idyll-components";
+import Placeholder from "./placeholder";
 
-class cohort extends React.PureComponent {
+class Cohort extends React.PureComponent {
   render() {
-    const { feature } = this.props;
-    const data = [
-      {iteration0: ".25"}
-    ];
+    const { feature, shippedFeature } = this.props;
+    const data = [{ iteration0: ".25" }];
     const prefix = "iteration with ";
     data[0][prefix + feature] = "-";
     const newItem = {
       iteration0: ".25"
     };
-    newItem[prefix + feature] = ".50"
-    data.push(newItem)
+    newItem[prefix + feature] = ".50";
+    data.push(newItem);
+    console.log(feature);
+    if (!shippedFeature)
+      return (
+        <Placeholder height="105px" placeholderText="Your analytics will appear here" />
+      );
     return <Table data={data} />;
   }
 }
 
-export default cohort;
+export default Cohort;

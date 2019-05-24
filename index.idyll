@@ -55,21 +55,25 @@ Let's look at an example. Suppose your a product manager for a fitness app and y
 [var name:"shippedFeature" value: false /]
 Name your feature and click "Ship it" to see the analytics: [TextInput value:feature /]
 [button onClick:`shippedFeature = true`]Ship it[/button]
-[Conditional if:`!shippedFeature`]
-[div style:`{
-  height: '100px',
-  background: '#f4b042'
-}`/]
-[/Conditional]
-[Conditional if: `shippedFeature`]
-[cohort feature:`feature`/]
-[/Conditional]
+[cohort feature:`feature` shippedFeature: `shippedFeature`/]
 
-If you're looking at this cohort analysis, would you conclude that your new feature has improved your product? It shouldn't. The up-tick might be explained by the fact that on cohort was active closer to the holidays when they were thinking more about a fitness related new year's resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven't.
+If you're looking at this cohort analysis, would you conclude that your new feature has improved your product? 
+[var name:"reveal" value:`false`/]
+[button onClick:`reveal = true`]yes[/button]
+[button onClick:`reveal = true`]no[/button]
+[Conditional if:`!reveal`]
+  [Placeholder placeholderText:"The correct answer will appear here" height:"155px" /]
+[/Conditional]
+[Conditional if:`reveal`]
+  It shouldn't. 
 
-[Aside]
-I've written about how we can avoid this problem with cohort analyses [here](https://www.philosophicalhacker.com/post/better-cohort-analysis/).
-[/Aside]
+  [Aside]
+  I've written about how we can avoid this problem with cohort analyses [here](https://www.philosophicalhacker.com/post/better-cohort-analysis/).
+  [/Aside]
+
+  The up-tick might be explained by the fact that on cohort was active closer to the holidays when they were thinking more about a fitness related new year's resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven't.
+  
+[/Conditional]
 
 So, statistics gives us insight into potential issues with the inferences we may draw from popular analytics tools. It also can give us hints as to how we can resolve these issues. Both of these skills make us better product managers.
 
