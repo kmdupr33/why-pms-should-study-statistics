@@ -1,18 +1,17 @@
 import React from "react";
+import styled from "styled-components";
 
-const Placeholder = ({height, placeholderText}) => (
-  <div
-    style={{
-      background: "#f4b042",
-      height,
-      color: "white",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
-    }}
-  >
-    {placeholderText}
-  </div>
+const Container = styled.div`
+  background: #f4b042;
+  height: ${({height}) => height};
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Placeholder = ({ height, placeholderText }) => (
+  <Container height={height}>{placeholderText}</Container>
 );
 
 export default Placeholder;

@@ -4,14 +4,15 @@
   "license": "MIT",
   "idyll": {
     "theme": "default",
-    "layout": "blog",
+    "layout": "centered",
     "css": "styles.css",
     "authorView": false
   },
   "dependencies": {
+    "d3": "^4.0.0",
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
-    "d3": "^4.0.0"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"

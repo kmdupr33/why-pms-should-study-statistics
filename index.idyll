@@ -6,44 +6,35 @@
   subtitle:"An Interactive Essay"
   author:"Matt Dupree, PM @ UniKey"
   authorLink:"https://philosophicalhacker.com"
-  date:`(new Date()).toDateString()`
+  date:"10 minute read"
   background:"#f4b042"
   color:"#ffffff"
    /]
 
-[Aside]
-(1) _Inspired: How to build tech products users love_, Marty Cagan, 51.
-[/Aside]
 
-Marty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically [every ](https://www.productplan.com/books-for-product-managers/) [recommended ](https://medium.com/@sebastienphl/my-product-management-reading-list-2017-cb874975c635) [reading ](http://www.cleverpm.com/2015/09/30/a-product-management-reading-list/) [list](https://productcoalition.com/my-top-5-reads-for-product-managers-216c3186b0e4) for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
+[blockquote]
+[br /]
+Data is the sword of the 21st century, those who wield it are the samurai.
+[br /]
+[br /]
+[emd/] Grady Brooch, IBM Chief Scientist
+[/blockquote]
 
-To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique that hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking, along with naive readings of commonly recommended product managment books like _Good to Great_ and _How Google Works_ can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and product-related revenue.
+[span className:"drop"]M[/span]arty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically [every ](https://www.productplan.com/books-for-product-managers/) [recommended ](https://medium.com/@sebastienphl/my-product-management-reading-list-2017-cb874975c635) [reading ](http://www.cleverpm.com/2015/09/30/a-product-management-reading-list/) [list](https://productcoalition.com/my-top-5-reads-for-product-managers-216c3186b0e4) for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
 
-[Aside]
-(2) The interactivity is powered by [Idyll](https://idyll-lang.org/), a markdown-like language for creating interactive articles.
-[/Aside]
+To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique that hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking, along with naive readings of commonly recommended product managment books like Jim Collins' _Built to Last_ can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and product-related revenue.
 
-Statistics can be tedious, so I've tried to weave in some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/] This interactivity means that this essay isn't great for reading on a mobile device. If you're reading this on a phone, my recommendation is that you bookmark it and come back later.
+Statistics can be tedious, so I've tried to weave in some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/]
 
-## Misleading Cohort Analyses: Statistics for Understanding Analytics
+## Statistics for Understanding Analytics
 
-[Aside]
-(3) This is actually a cohort analysis of weekly retention on my blog. Apparently, my writing isn't that interesting. 😉
-
-(4) Fabric’s graph looks a little different and it only tracks retention, but its still a cohort analysis.
-[/Aside]
-
-If you’ve ever looked at analytics for software products, you’ve probably run across a graph that looks like this:
+It's almost a platitude that if you're working in product managment, you should be collecting and reviewing data that gives you insights into what you should be building next. If you’ve ever looked at analytics for software products, you’ve probably run across a graph that looks like this:
 
 ![cohort analysis graph](static/images/cohort-analysis.png)
 
 Graphs like this one depict cohort analyses.[Footnote number:3/] This particular graph is from Google Analytics. Apple also has one for app analytics. So does Fabric.[Footnote number: 4/]
 
 Cohort analyses can be very useful. For example, Eric Reis, in _The Lean Startup_, recounts how cohort analysis helped his startup realize that their efforts at improving their product weren't working:
-
-[Aside]
-(5) Eric Reis, The Lean Startup, 140-141
-[/Aside]
 
 [blockquote]Thanks to the power of cohort analysis, we could not blame this failure on...external market conditions, or any other excuse. Each cohort represented an independent report card and try as we might, we were getting straight C's.[Footnote number:5/][/blockquote]
 
@@ -77,6 +68,62 @@ If you're looking at this cohort analysis, would you conclude that your new feat
 
 So, statistics gives us insight into potential issues with the inferences we may draw from popular analytics tools. It also can give us hints as to how we can resolve these issues. Both of these skills make us better product managers.
 
-## Misleading Business Books: Statistics for Understanding Organizational Dynamics
+## Statistics for Understanding Organizational Dynamics
+
+Product managers must have a strong understanding of how to influence the organizations they're working for. Presumably, this is why _Switch: how to change when change is hard_ is commonly listed as a must-read for product managers. This idea is also both implicit and explicit in much of what Marty Cagan writes about product management. For example, he says,
+
+[blockquote]if your company is not yet set up around dedicated product teams, this is probably the most important thing to fix. Everything else depends on this.[Footnote number:6/][/blockquote]
+
+Here's [another example from Cagan](https://svpg.com/behind-every-great-product/) involving a bold product move and coorporate transformation story from Adobe:
+
+[blockquote]
+In the year 2011, Lea was leading product for Adobe’s Creative Suite.
+
+She had helped Adobe to build a very large and successful business for itself – on the order of $2B in annual license revenue – with its desktop–based Creative Suite.
+
+But Lea knew the market was changing, and the company needed to move from the old desktop-centric, annual upgrade model, to a subscription-based model supporting all the devices designers were now using...
+
+Lea then began a sustained and exhausting campaign to continuously communicate with leaders and stakeholders across the entire company...A continuous stream of prototypes helped keep people excited about what this new future would bring...
+
+This is one of the most impressive, nearly super-human, examples I know of a product leader driving massive and meaningful change in a large and established company.
+[/blockquote]
+
+Getting your company to reorganize around product teams or to take on a big product risk are not trivial tasks. Neither is the task of understanding whether any of the 100s of changes that are tauted as _essential to success_ by various gurus [emd/] is _actually necessary_ for your organization. 
+
+Understanding both how to influence your organization effectively and the direction in which you should influence your organization means you need to be good a separating recommendations backed by strong evidence from the recomendations that merely sound good. It turns out that we're pretty bad at this.
+
+Exhibit A: One _extremely common_ practice in business books is to present some sort of recommendation or framework for product or organizational design and then to point at three or four wildly successful business that use the framework. These kinds of observations are almost always framed as a reason to believe that the framework being offered is worth adopting by your business (and worth the money you paid to read about it).
+
+This is a _terrible_ reason for taking a framework seriously. To see why, take a look at the following graph:
+
+[Random /]
+
+This is a plot of 100 randomly generated data points. Click randomize a few times and notice that there's almost always a few data points that wind up up the upper right square. 
+
+Now, imagine that the x-axis of the graph represents the extent to which a company adopts some trendy managment recommendation like Objectives and Key Results, Big Hairy Audatous Goals (BHAGs), or Jobs to Be Done, and imagine that the y-axis represents the companies performance. What the above graph shows is that _by sheer coincidence_, it's quite likely that some of the high-performing companies will adopt some trendy management technique, and that it's possible for us to observe this _even if there's literally no correlation between the management practice and the company's performance_.
+
+Because the authors only focus on a few examples, it's easy to be fooled into thinking that the exemplars' outstanding success is a good reason for adopting the managment or product strategies the author recommends. This has actually already happened with BHAGs from Jim Collins' popular book _Built to Last_. Many of the companies that were supposedly "built to last" in part because of their reliance on "big hairy audatous goals" performed considerably worse after the book's publication. The implication is that the correlation between the use of BHAGs (and the book's other recommendations) and company performance is not as strong as the authors' thought.[Footnote number:7/]
+
+Statistics gives us insight into potential issues with the inferences we may draw from popular business and product books. Being able to separate solid recommendations from merely trendy ones makes us better product managers.
+
+## Statistics for Better Forecasting
 
 
+
+## Conclusion and Further reading
+
+Hopefully, I've managed to convince you that statistics is _essential_ for good product management. If you're convinced and want to start studying, I recommend the following resources:
+
+* [Naked Statistics: Stripping the Dread from the Data](https://www.amazon.com/gp/product/039334777X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=039334777X&linkCode=as2&tag=philosophic0a-20&linkId=3f5f14d8c3827ba539aa3f813992a1d3) is a great on-the-go read and a strong overview of important stastical concepts.
+* _Open Intro Statistics_ is a great textbook on statistics, which you can find as a pdf [here](https://www.openintro.org/stat/textbook.php?stat_book=os), or, if you want a paperbook version, you can order it [here](https://www.amazon.com/gp/product/1943450048/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1943450048&linkCode=as2&tag=philosophic0a-20&linkId=40b62a5a722e5bc50720d8a228e0bcbf). The textbook has exercises which I've found extremely useful for solidifying my understanding of the concepts.
+* [Udacity's introduction to statistics course](https://www.udacity.com/course/intro-to-statistics--st101) is pretty solid. However, the concepts seemed to stick a little better when I read them in a book and/or did exercises with pen and paper.
+
+## Notes
+
+1. _Inspired: How to build tech products users love_, Marty Cagan, 51.
+1. The interactivity is powered by [Idyll](https://idyll-lang.org/), a markdown-like language for creating interactive articles.
+1. This is actually a cohort analysis of weekly retention on my blog. Apparently, my writing isn't that interesting. 😉
+1. Fabric’s graph looks a little different and it only tracks retention, but its still a cohort analysis.
+1. Eric Reis, The Lean Startup, 140-141
+1. _Inspired: How to build tech products users love_, Marty Cagan, 39.
+1. Daniel Kahneman, _Thinking Fast and Slow_, under the section called "Recipes for Success."
