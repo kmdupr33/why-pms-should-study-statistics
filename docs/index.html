@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>Why PMs Should Study Statistics</title>
+    <meta property="og:title" content="Why PMs Should Study Statistics" />
+    <meta charset="utf-8" />
+    <meta property="og:type" content="article" />
+
+    <meta property="og:description" content="An Interactive Essay" />
+    <meta property="description" content="An Interactive Essay" />
+
+    <link rel="stylesheet" href="static/idyll_styles.css" />
+  </head>
+  <body>
+    <div id="idyll-mount"><div data-reactroot=""><div class="idyll-root"><div class=" idyll-text-container"></div><div class="article-header" style="background:#f4b042;color:#ffffff"><h1 class="hed">Why PMs Should Study Statistics</h1><h2 class="dek">An Interactive Essay</h2><div class="byline">By: <a href="https://philosophicalhacker.com">Matt Dupree, PM @ UniKey</a></div><div class="idyll-pub-date">10 minute read</div></div><div class=" idyll-text-container"><blockquote><br/>
+Data is the sword of the 21st century, those who wield it are the samurai.<br/><br/><span>—</span> Grady Brooch, IBM Chief Scientist</blockquote><p><span class="drop">M</span>arty Cagan <span>—</span> seasoned product manager and author of a book and blog that makes practically every recommended reading list for new product managers <span>—</span> says that there are two academic courses that “every product manager should take”: finance and computer science.<sup style="font-size:10px;line-height:0">1</sup> In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.</p><p>To drive home the importance of statistics in understanding analytics, we’ll look at how standard cohort analyses <span>—</span> a technique hailed as “scientific” and “data-driven” <span>—</span> can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we’ll look at how weak statisical thinking <span>—</span> along with naive readings of commonly recommended product managment books like Jim Collins’ <em>Built to Last</em> <span>—</span> can lead to bad inferences about how and when to implement cooprorate change. Finally, we’ll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and competitor product moves.</p><p>Statistics can be tedious, so I’ve tried to add some interactivity into this essay to make things more interesting and digestable.<sup style="font-size:10px;line-height:0">2</sup></p><h2>Statistics for Understanding Analytics</h2><p>It’s almost a platitude that if you’re working in product managment, you should be collecting and reviewing data that gives you insights into what you should be building next. If you’ve ever looked at analytics for software products, you’ve probably run across a graph that looks like this:</p><img src="static/images/cohort-analysis.png" alt="cohort analysis graph"/><p>Graphs like this one depict cohort analyses.<sup style="font-size:10px;line-height:0">3</sup> This particular graph is from Google Analytics. Apple also has one for app analytics. So does Fabric.<sup style="font-size:10px;line-height:0">4</sup></p><p>Cohort analyses can be very useful. For example, Eric Reis, in <em>The Lean Startup</em>, recounts how cohort analysis helped his startup realize that their efforts at improving their product weren’t working:</p><blockquote>Thanks to the power of cohort analysis, we could not blame this failure on...external market conditions, or any other excuse. Each cohort represented an independent report card and try as we might, we were getting straight C’s.<sup style="font-size:10px;line-height:0">5</sup></blockquote><p>Although cohort analyses are often useful, they’re definitely not perfect ways of tracking progress in product development. Sometimes this is fine. We aren’t always looking for perfect inferences that our product changes are driving better metrics. Sometimes we just settle for evidence that <em>suggests</em> the inference. But, if we’re looking for solid inferences, traditional cohort analyses can fall short in ways we may not even realize if we don’t have a basic understanding of statistics.</p><p>Let’s look at an example. Suppose you’re a product manager for a fitness app and you’ve got a product that you’d like to start iterating on. You’re a good product manager, however, so you decide you’re going to “experiment” with a new feature and see how the introduction of that feature affects engagement using cohort analysis.</p><p>
+Name your feature and click “Ship it” to see the analytics: <input type="text" value="your feature"/><button>Ship it</button><div height="105px" class="sc-bdVaJa cgPgVR">Your analytics will appear here</div></p><p>If you’re looking at this cohort analysis, would you conclude that your new feature has improved your product? <button>yes</button><button>no</button><div><div height="155px" class="sc-bwzfXH iuSuip">The correct answer will appear here</div></div><div style="display:none"><p>
+  It shouldn’t. </p><div class="aside-container"><div class="aside">
+  I’ve written about how we can avoid this problem with cohort analyses <a href="https://www.philosophicalhacker.com/post/better-cohort-analysis/">here</a>.
+  </div></div><p>The up-tick might be explained by the fact that one cohort was active closer to the holidays when they were thinking more about a fitness-related New Year’s resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven’t.
+  </p></div></p><p>So, statistics gives us insight into potential issues with the inferences we may draw from popular analytics tools. It also can give us hints as to how we can resolve these issues. Both of these skills make us better product managers.</p><h2>Statistics for Understanding Organizational Dynamics</h2><p>Product managers must have a strong understanding of how to influence the organizations they’re working for. This idea is both implicit and explicit in much of what Marty Cagan writes about product management. For example, he says,</p><blockquote>if your company is not yet set up around dedicated product teams, this is probably the most important thing to fix. Everything else depends on this.<sup style="font-size:10px;line-height:0">6</sup></blockquote><p>Here’s <a href="https://svpg.com/behind-every-great-product/">another example from Cagan</a> involving a bold product move and coorporate transformation story from Adobe:</p><blockquote><p>
+In the year 2011, Lea was leading product for Adobe’s Creative Suite.</p><p>She had helped Adobe to build a very large and successful business for itself – on the order of $2B in annual license revenue – with its desktop–based Creative Suite.</p><p>But Lea knew the market was changing, and the company needed to move from the old desktop-centric, annual upgrade model, to a subscription-based model supporting all the devices designers were now using...</p><p>Lea then began a sustained and exhausting campaign to continuously communicate with leaders and stakeholders across the entire company...A continuous stream of prototypes helped keep people excited about what this new future would bring...</p><p>This is one of the most impressive, nearly super-human, examples I know of a product leader driving massive and meaningful change in a large and established company.</p></blockquote><p>Getting your company to reorganize around product teams or to take on a big product risk are not trivial tasks. Neither is the task of understanding whether any of the 100s of changes that are tauted as <em>essential to success</em> by various gurus are <em>actually necessary</em> for your organization.</p><p>Understanding both how to influence your organization effectively and the direction in which you should influence your organization means you need to be good a separating recommendations backed by strong evidence from the recomendations that merely sound good. It turns out that we’re pretty bad at this.</p><p>Exhibit A: One <em>extremely common</em> practice in business books is to present some sort of recommendation or framework for product or organizational design and then to point at three or four wildly successful business that use the framework. These kinds of observations are almost always framed as a reason to believe that the framework being offered is worth adopting by your business (and worth the money you paid to read about it).</p><p>This is a <em>terrible</em> reason for taking a framework seriously. To see why, take a look at the following graph:</p><div><div style="height:100%;width:100%;user-select:none;pointer-events:none;touch-action:none;position:relative" class="VictoryContainer"><svg width="350" height="350" role="img" aria-labelledby="victory-container-1-title victory-container-1-desc" viewBox="0 0 350 350" style="pointer-events:all;width:100%;height:100%"><g><path d="M 224, 75
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6955787137648535px;y:0.9013485200604223px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 169, 168
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.4754868955753626px;y:0.5294748659009743px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 116, 102
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.2642676521015528px;y:0.790264851592037px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 69, 106
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.07506759225750104px;y:0.7740590718199034px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 289, 257
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9548350728280606px;y:0.17033709295265953px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 281, 113
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9223734381591975px;y:0.7492584551011507px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 83, 104
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.13059824076668503px;y:0.7842842742812897px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 247, 163
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7891184257676322px;y:0.5461481255864318px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 225, 88
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.699374311999964px;y:0.8474970907843828px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 179, 108
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5173737926180464px;y:0.7671703812127595px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 145, 169
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.381535307379981px;y:0.5231151730472006px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 152, 137
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.40960378042124357px;y:0.6520842667080393px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 270, 71
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8802197200189346px;y:0.9157470082112442px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 110, 190
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.23825803016017333px;y:0.43834336411817687px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 54, 285
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.016759429365732936px;y:0.05930930158458425px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 57, 174
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.026532298736894555px;y:0.5054706970744649px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 152, 64
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.4093346518460601px;y:0.9431393262298129px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 265, 172
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8609904668857153px;y:0.5118190967785015px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 145, 89
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.37946358243770395px;y:0.8451507363818715px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 285, 273
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9381867988596757px;y:0.10883703253492527px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 236, 217
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7441432873927569px;y:0.3305373125528466px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 259, 79
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8367525619308094px;y:0.8856065720831354px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 221, 92
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6822964670874963px;y:0.830083679694531px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 67, 50
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.06870763550303094px;y:0.9997554099992747px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 290, 108
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9583372004213655px;y:0.7685708769047659px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 252, 110
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8090722554113274px;y:0.7606875642126891px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 158, 176
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.43185763208940586px;y:0.4964964180988356px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 67, 188
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.06971514238928256px;y:0.44799484146145807px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 120, 101
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.27925791034490866px;y:0.7942234270751345px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 177, 64
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5085548228228982px;y:0.9441568520105079px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 232, 79
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.726385330055102px;y:0.8826134995087054px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 230, 227
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.720136031676583px;y:0.29234422161083473px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 165, 157
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.46064001665444976px;y:0.5717634770055322px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 124, 188
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.2976117932770206px;y:0.44921143938100583px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 106, 292
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.222196939485382px;y:0.033347041621090145px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 222, 150
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6895074252590783px;y:0.60102178241901px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 192, 83
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5694442654932084px;y:0.8660101693410147px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 213, 253
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6526574992483845px;y:0.18802312506191443px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 219, 103
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6758152517517617px;y:0.788249412978153px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 66, 233
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.06318610389331791px;y:0.26659186084260633px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 241, 209
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7624455202533289px;y:0.3621283600310654px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 81, 76
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.12511727195703926px;y:0.8943641894855834px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 89, 262
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.1558074816425672px;y:0.1515695926988252px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 222, 220
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6875095000416702px;y:0.32119080654973975px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 136, 136
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3429004801168001px;y:0.6542661946953336px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 131, 110
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3242177526885335px;y:0.7601162451693619px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 213, 83
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6509610669677333px;y:0.8679146441209955px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 256, 258
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8238585788687673px;y:0.16715266092296743px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 139, 66
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3558207318229467px;y:0.936119034174814px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 176, 254
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5026474589026131px;y:0.18242703763310053px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 155, 192
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.42068776752500714px;y:0.43278755796689383px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 294, 202
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9752310499636998px;y:0.3924765526799927px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 297, 268
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9891907427995517px;y:0.12608202966732152px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 68, 234
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.0731520428217507px;y:0.2629033856524461px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 235, 194
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7398188023714616px;y:0.42294103765154833px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 119, 294
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.2779319984983555px;y:0.022785566146950043px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 121, 238
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.28280210987999577px;y:0.24912064637196618px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 246, 105
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7846151289983561px;y:0.7808059681998021px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 53, 179
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.012855893213658875px;y:0.48548492457620784px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 251, 70
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8048858274978241px;y:0.9203682364193049px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 268, 232
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8704708792620353px;y:0.2722356845539138px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 137, 96
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3496073196174705px;y:0.8159310576415104px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 148, 107
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3905309338126073px;y:0.7711406305610295px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 91, 213
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.16535908578230862px;y:0.34667738876702736px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 269, 77
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8756150690666558px;y:0.8928711842836385px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 247, 158
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7880025864614053px;y:0.56944021439903px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 64, 285
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.056836764765949344px;y:0.0618259388021678px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 101, 172
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.20560851227090837px;y:0.5111305386099014px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 141, 249
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.36345969673194967px;y:0.20484410768043326px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 88, 171
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.151211418122146px;y:0.5146671016779223px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 259, 206
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8350407409918414px;y:0.3752171052803035px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 206, 172
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.6228680809710037px;y:0.5120227916229492px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 273, 188
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8920600378071504px;y:0.44769192758784526px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 186, 278
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5449849503376256px;y:0.08773349943315178px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 291, 153
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9639645122074383px;y:0.5862783746087352px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 244, 112
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7753884376431672px;y:0.7501353697761779px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 140, 57
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3588735301312187px;y:0.972642110268926px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 231, 72
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7259283191343817px;y:0.910151322297559px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 65, 137
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.05804519353473436px;y:0.6525723045581946px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 142, 73
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3695728738365536px;y:0.9094187102118636px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 240, 149
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7604817696797865px;y:0.6035087928737302px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 118, 207
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.27189950874012525px;y:0.3730457739885411px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 183, 108
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5323602644131642px;y:0.7686615083080512px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 146, 215
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3854681468254679px;y:0.33960580108622684px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 230, 166
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.719456380437326px;y:0.5366706139127859px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 283, 126
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9329571573092246px;y:0.6973711052917453px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 69, 174
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.07626823328394416px;y:0.5046956689099455px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 192, 194
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.5671042220639864px;y:0.4251695260352517px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 290, 72
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9593149462880464px;y:0.9135975170129922px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 170, 264
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.47905187627297763px;y:0.14298852898365744px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 248, 88
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7918524241817522px;y:0.8463545099493006px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 273, 72
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.8904483252700117px;y:0.913173535190223px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 296, 135
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9855349019595716px;y:0.6591446088642086px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 96, 270
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.18431156681356375px;y:0.12087817182172578px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 119, 141
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.2779470044065828px;y:0.6367857432089239px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 277, 123
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.9088401852829493px;y:0.7079467766861425px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 127, 164
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.3091629830730591px;y:0.545470409905179px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 248, 226
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.7903847763381486px;y:0.2959009456486692px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 65, 89
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.061730689535293815px;y:0.8445002568127378px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path><path d="M 296, 189
+      m -3, 0
+      a 3, 3 0 1,0 6,0
+      a 3, 3 0 1,0 -6,0" role="presentation" shape-rendering="auto" style="x:0.98331703817257px;y:0.4427935270677652px;fill:#455A64;opacity:1;stroke:transparent;stroke-width:0"></path></g><g role="presentation"><line x1="50" x2="300" y1="300" y2="300" style="stroke:#90A4AE;fill:transparent;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><g role="presentation"><line x1="100" x2="100" y1="300" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="100" x2="100" y1="300" y2="305" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="10.26" x="100" y="313"><tspan x="100" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="middle">0.2</tspan></text></g><g role="presentation"><line x1="150" x2="150" y1="300" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="150" x2="150" y1="300" y2="305" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="10.26" x="150" y="313"><tspan x="150" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="middle">0.4</tspan></text></g><g role="presentation"><line x1="200" x2="200" y1="300" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="200" x2="200" y1="300" y2="305" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="10.26" x="200" y="313"><tspan x="200" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="middle">0.6</tspan></text></g><g role="presentation"><line x1="250" x2="250" y1="300" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="250" x2="250" y1="300" y2="305" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="10.26" x="250" y="313"><tspan x="250" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="middle">0.8</tspan></text></g><g role="presentation"><line x1="300" x2="300" y1="300" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="300" x2="300" y1="300" y2="305" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="10.26" x="300" y="313"><tspan x="300" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="middle">1.0</tspan></text></g></g><g role="presentation"><line x1="50" x2="50" y1="50" y2="300" style="stroke:#90A4AE;fill:transparent;stroke-width:2;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><g role="presentation"><line x1="50" x2="300" y1="250" y2="250" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="50" x2="45" y1="250" y2="250" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="4.26" x="37" y="250"><tspan x="37" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="end">0.2</tspan></text></g><g role="presentation"><line x1="50" x2="300" y1="200" y2="200" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="50" x2="45" y1="200" y2="200" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="4.26" x="37" y="200"><tspan x="37" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="end">0.4</tspan></text></g><g role="presentation"><line x1="50" x2="300" y1="150" y2="150" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="50" x2="45" y1="150" y2="150" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="4.26" x="37" y="150"><tspan x="37" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="end">0.6</tspan></text></g><g role="presentation"><line x1="50" x2="300" y1="100" y2="100" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="50" x2="45" y1="100" y2="100" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="4.26" x="37" y="100"><tspan x="37" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="end">0.8</tspan></text></g><g role="presentation"><line x1="50" x2="300" y1="50" y2="50" style="stroke:#ECEFF1;fill:transparent;stroke-dasharray:10, 5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><line x1="50" x2="45" y1="50" y2="50" style="stroke:#90A4AE;fill:transparent;size:5px;stroke-width:1;stroke-linecap:round;stroke-linejoin:round" role="presentation" shape-rendering="auto" vector-effect="non-scaling-stroke"></line><text dx="0" dy="4.26" x="37" y="50"><tspan x="37" dx="0" style="fill:#455A64;font-size:12px;font-family:&#x27;Roboto&#x27;, &#x27;Helvetica Neue&#x27;, Helvetica, sans-serif;stroke:transparent;letter-spacing:normal;padding:8px;stroke-width:0" text-anchor="end">1.0</tspan></text></g></g></svg><div style="z-index:99;position:absolute;top:0;left:0;width:100%;height:100%"><svg width="350" height="350" viewBox="0 0 350 350" style="overflow:visible;width:100%;height:100%"></svg></div></div></div><button>Randomize</button><p>This is a plot of 100 randomly generated data points. Click randomize a few times and notice that there’s almost always a few data points that wind up up the upper right square. </p><p>Now, imagine that the x-axis of the graph represents the extent to which a company adopts some trendy managment recommendation like Objectives and Key Results, Big Hairy Audatous Goals (BHAGs), or Jobs to Be Done, and imagine that the y-axis represents the companies’ performance. What the above graph shows is that <em>by sheer coincidence</em>, it’s quite likely that some of the high-performing companies will adopt some trendy management technique, and that it’s <em>likely</em> we’ll observe this <em>even if there’s literally no correlation between the management practice and the company’s performance</em>.</p><p>Because the authors only focus on a few examples, it’s easy to be fooled into thinking that the exemplars’ outstanding success is a good reason for adopting the managment or product strategies the author recommends. This has actually already happened with BHAGs from Jim Collins’ popular book <em>Built to Last</em>. Many of the companies that were supposedly “built to last” in part because of their reliance on “big hairy audatous goals” performed considerably worse after the book’s publication. The implication is that the correlation between the use of BHAGs (and the book’s other recommendations) and company performance is not as strong as the authors’ thought.<sup style="font-size:10px;line-height:0">7</sup></p><p>Statistics gives us insight into potential issues with the inferences we may draw from popular business and product books. Being able to separate solid recommendations from merely trendy ones makes us better product managers.</p><h2>Statistics for Better Forecasting</h2><p>Product managers have to make bets on the future. We just saw this with the above Adobe example, but if you think for a few seconds about the types of risk that product managers are charged with managing, it becomes obvious that product managers need to make these kinds of bets all the time. Product managers <span>—</span> <a href="https://svpg.com/four-big-risks/">as Marty Cagan points out</a><span>—</span> must manage risk around:</p><blockquote><ol><li>value risk (whether customers will buy it or users will choose to use it)</li><li>usability risk (whether users can figure out how to use it)</li><li>feasibility risk (whether our engineers can build what we need with the time, skills and technology we have)</li><li>business viability risk (whether this solution also works for the various aspects of our business)</li></ol></blockquote><p>Most of us aren’t very good at making these kinds of bets. Perhaps the most famous illustration of this comes from Phillip Tetlock’s 20-year study on expert political forecasts. Here’s a description of the study from Daniel Kahneman in <em>Thinking Fast and Slow</em>:</p><blockquote><p>
+Tetlock interviewed 284 people who made their living “commenting or offering advice on political and economic trends”…Tetlock gathered more than 80,000 predictions…Respondents were asked to rate the probabilities of three alternative outcomes in every case: the persistence of the status quo, more of something such as political freedom or economic growth, or less of that thing.</p><p>The results were devastating…people who spend their time, and earn their living, studying a particular topic produce poorer predictions than dart-throwing monkeys who would have distributed their choices evenly over the options...<sup style="font-size:10px;line-height:0">8</sup></p></blockquote><p>In that same study, however, Phillip Tetlock found that there was a small group of people who were markedly better than the others at forecasting. He dubbed that group “superforecasters” and wrote <a href="https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0804136718&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=77d36f863f9583844b729258366e5de1">an excellent book</a> about what makes that group different from the others. </p><p>One of the key differences he found among those with higher forecasting ability was strong statistical thinking. More specifically, Tetlock found that superforecasters have a strong intuitive grasp of Baysian reasoning, which is a way of updating probabilistic judgments based on new information.<sup style="font-size:10px;line-height:0">9</sup></p><p>I won’t get into how Bayes’ rule works here, but I do want to quickly walk through an exmaple that will hopefully illustrate how understanding the rule could be useful and show how counter-intuitive it is. </p><p>Suppose you’re roadmapping your fitness app, and you’ve started to worry that <a href="https://www.bloomberg.com/news/articles/2019-03-23/apple-s-reinvention-as-a-services-company-starts-for-real-monday">Apple’s new focus on services</a> will lead them to start modifying their health app so that it’s features compete with the ones you are offering. You’re worried enough that you’re considering prioritizing features that will help you fend off Apple’s competitive moves over some other features that you believe could be more beneficial if Apple wasn’t going to enter the market. </p><p>So you have to make bet here. Good forecasters attach probabilities to their predictions (more on why some other time or just read <a href="https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0804136718&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=77d36f863f9583844b729258366e5de1">Superforecasters</a>). You do some research, but ultimately decide that you’re skeptical that Apple will actually do anything in the fitness space. A value of ”.10″ means you’d wager there’s a 10% chance Apple starts to build a fitness-oriented service.</p><p><input type="range" value="0.1" min="0.01" max="1" step="0.01"/> 
+Initial guess about Apple’s intentions (prior): <span class="idyll-display">0.10</span></p><p>A few weeks after you’ve told your team about your skepticism, suppose a coworker pulls you aside and tells you that an Apple-savy forecaster like <a href="https://www.aboveavalon.com">Above Avalon</a> has recently predicted that Apple will in fact more aggressively pursue a fitness-oriented service built on top of their fitness app. She tells you,</p><blockquote>
+This analyst can read Apple like a book. In the past, when Apple has made a similar move like this, there’s a <span class="idyll-display">80%</span> chance that this forecaster saw it coming.” (This is called “sensitivity.”) You should really reconsider your position.</blockquote><p>“With enough predictions, anyone can predict an event,” you think to yourself, so you do some more research on the analyst and you find that <span class="idyll-display">10%</span> of the time when Apple <em>wasn’t</em> making a similar move, the analyst <em>incorrectly</em> predicts the move was coming anyway. (This is a measure of “specificity.”) Both of these pieces of information are captured in (adjustable) sliders below:</p><p><input type="range" value="0.8" min="0.01" max="1" step="0.01"/> 
+(sensitivity): <span class="idyll-display">0.80</span></p><p><input type="range" value="0.1" min="0.01" max="1" step="0.01"/> 
+(specificity): <span class="idyll-display">0.10</span></p><p>Given all of this information, what probability should you assign to your new forecast?</p><p><input type="range" value="0.7" min="0.01" max="1" step="0.01"/> my new forecast is <span class="idyll-display">0.70</span></p><p><button>Submit</button><div><div height="50px" class="sc-bwzfXH hCMDNf">Answer will appear here</div></div><div style="display:none">
+The correct answer is <span class="idyll-display">47%</span>. Your answer is <span class="idyll-display">23%</span> off. Play around with the sliders to see how different inputs lead to a different answer.</div><br/>
+Statistics gives us insight into how to make better product strategy bets. Being able to make the right bets for your company and product is essential to good product management.</p><h2>Conclusion and Further reading</h2><p>To sum up: a strong grasp of statistics can help product managers read analytics, understand and influence organizational dynamics, and make better forecasts. Hopefully, that’s enough to convince you that a strong grasp of statistics is <em>essential</em> for good product management. If you’re convinced and want to start studying, I recommend the following resources:</p><ul><li><a href="https://www.amazon.com/gp/product/039334777X/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=039334777X&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=3f5f14d8c3827ba539aa3f813992a1d3">Naked Statistics: Stripping the Dread from the Data</a> is a great on-the-go read and a strong overview of important stastical concepts.</li><li><em>Open Intro Statistics</em> <!-- -->is a great textbook on statistics, which you can find as a pdf <a href="https://www.openintro.org/stat/textbook.php?stat_book=os">here</a>, or, if you want a paperbook version, you can order it <a href="https://www.amazon.com/gp/product/1943450048/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1943450048&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=40b62a5a722e5bc50720d8a228e0bcbf">here</a>. The textbook has exercises which I’ve found extremely useful for solidifying my understanding of the concepts.</li><li><a href="https://www.udacity.com/course/intro-to-statistics--st101">Udacity’s introduction to statistics course</a> is pretty solid. However, the concepts seemed to stick a little better when I read them in a book and<!-- -->/or did exercises with pen and paper.</li></ul><h2>Notes</h2><ol><li>Marty Cagan, <a href="https://www.amazon.com/gp/product/1119387507/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1119387507&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=b573139d50e5577ae682547322e58ed1">Inspired: How to build tech products users love</a>, <!-- -->5<!-- -->1<!-- -->.</li><li>The interactivity is powered by <a href="https://idyll-lang.org/">Idyll</a>, a markdown-like language for creating interactive articles.</li><li>This is actually a cohort analysis of weekly retention on my blog. Apparently, my writing isn’t that interesting. 😉</li><li>Fabric’s graph looks a little different and it only tracks retention, but its still a cohort analysis.</li><li>Eric Reis, <em>The Lean Startup</em>, <!-- -->1<!-- -->4<!-- -->0<!-- -->-<!-- -->1<!-- -->4<!-- -->1<!-- -->.</li><li>Marty Cagan, <a href="https://www.amazon.com/gp/product/1119387507/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=1119387507&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=b573139d50e5577ae682547322e58ed1">Inspired: How to build tech products users love</a>, <!-- -->3<!-- -->9<!-- -->.</li><li>Daniel Kahneman, <em>Thinking Fast and Slow</em>, under the section called “Recipes for Success.”</li><li>Ibid., under “The Illusions of Pundits.”</li><li>Phillip Tetlock and Dan Gardner, <a href="https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&amp;camp=1789&amp;creative=9325&amp;creativeASIN=0804136718&amp;linkCode=as2&amp;tag=philosophic0a-20&amp;linkId=77d36f863f9583844b729258366e5de1">Superforecasters: the art and science of prediction</a>, <!-- -->1<!-- -->7<!-- -->2<!-- -->.</li></ol></div></div></div></div>
+    <script src="static/idyll_index.js"></script>
+  </body>
+</html>
