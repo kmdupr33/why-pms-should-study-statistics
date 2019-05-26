@@ -20,11 +20,11 @@ Data is the sword of the 21st century, those who wield it are the samurai.
 [emd/] Grady Brooch, IBM Chief Scientist
 [/blockquote]
 
-[span className:"drop"]M[/span]arty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically [every ](https://www.productplan.com/books-for-product-managers/) [recommended ](https://medium.com/@sebastienphl/my-product-management-reading-list-2017-cb874975c635) [reading ](http://www.cleverpm.com/2015/09/30/a-product-management-reading-list/) [list](https://productcoalition.com/my-top-5-reads-for-product-managers-216c3186b0e4) for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
+[span className:"drop"]M[/span]arty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically every recommended reading list for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
 
-To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique that hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking, along with naive readings of commonly recommended product managment books like Jim Collins' _Built to Last_ can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and product-related revenue.
+To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking [emd/] along with naive readings of commonly recommended product managment books like Jim Collins' _Built to Last_ [emd/] can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and competitor product moves.
 
-Statistics can be tedious, so I've tried to weave in some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/]
+Statistics can be tedious, so I've tried to add some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/]
 
 ## Statistics for Understanding Analytics
 
@@ -40,7 +40,7 @@ Cohort analyses can be very useful. For example, Eric Reis, in _The Lean Startup
 
 Although cohort analyses are often useful, they're definitely not perfect ways of tracking progress in product development. Sometimes this is fine. We aren't always looking for perfect inferences that our product changes are driving better metrics. Sometimes we just settle for evidence that _suggests_ the inference. But, if we're looking for solid inferences, traditional cohort analyses can fall short in ways we may not even realize if we don't have a basic understanding of statistics.
 
-Let's look at an example. Suppose your a product manager for a fitness app and you've got a product that you'd like to start iterating on. You're a good project manager, however, so you decide you're going to "experiment" with a new feature and see how the introduction of that feature affects engagement using cohort analysis.
+Let's look at an example. Suppose you're a product manager for a fitness app and you've got a product that you'd like to start iterating on. You're a good product manager, however, so you decide you're going to "experiment" with a new feature and see how the introduction of that feature affects engagement using cohort analysis.
 
 [var name:"feature" value:"your feature" /]
 [var name:"shippedFeature" value: false /]
@@ -62,7 +62,7 @@ If you're looking at this cohort analysis, would you conclude that your new feat
   I've written about how we can avoid this problem with cohort analyses [here](https://www.philosophicalhacker.com/post/better-cohort-analysis/).
   [/Aside]
 
-  The up-tick might be explained by the fact that on cohort was active closer to the holidays when they were thinking more about a fitness related new year's resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven't.
+  The up-tick might be explained by the fact that one cohort was active closer to the holidays when they were thinking more about a fitness-related New Year's resolution. The difference between earlier and later cohorts (a difference ultimately driven by time of year) is a confounding variable that could lead us into thinking we have improved the product when we haven't.
   
 [/Conditional]
 
@@ -70,7 +70,7 @@ So, statistics gives us insight into potential issues with the inferences we may
 
 ## Statistics for Understanding Organizational Dynamics
 
-Product managers must have a strong understanding of how to influence the organizations they're working for. Presumably, this is why _Switch: how to change when change is hard_ is commonly listed as a must-read for product managers. This idea is also both implicit and explicit in much of what Marty Cagan writes about product management. For example, he says,
+Product managers must have a strong understanding of how to influence the organizations they're working for. This idea is both implicit and explicit in much of what Marty Cagan writes about product management. For example, he says,
 
 [blockquote]if your company is not yet set up around dedicated product teams, this is probably the most important thing to fix. Everything else depends on this.[Footnote number:6/][/blockquote]
 
@@ -88,7 +88,7 @@ Lea then began a sustained and exhausting campaign to continuously communicate w
 This is one of the most impressive, nearly super-human, examples I know of a product leader driving massive and meaningful change in a large and established company.
 [/blockquote]
 
-Getting your company to reorganize around product teams or to take on a big product risk are not trivial tasks. Neither is the task of understanding whether any of the 100s of changes that are tauted as _essential to success_ by various gurus [emd/] is _actually necessary_ for your organization. 
+Getting your company to reorganize around product teams or to take on a big product risk are not trivial tasks. Neither is the task of understanding whether any of the 100s of changes that are tauted as _essential to success_ by various gurus are _actually necessary_ for your organization.
 
 Understanding both how to influence your organization effectively and the direction in which you should influence your organization means you need to be good a separating recommendations backed by strong evidence from the recomendations that merely sound good. It turns out that we're pretty bad at this.
 
@@ -100,7 +100,7 @@ This is a _terrible_ reason for taking a framework seriously. To see why, take a
 
 This is a plot of 100 randomly generated data points. Click randomize a few times and notice that there's almost always a few data points that wind up up the upper right square. 
 
-Now, imagine that the x-axis of the graph represents the extent to which a company adopts some trendy managment recommendation like Objectives and Key Results, Big Hairy Audatous Goals (BHAGs), or Jobs to Be Done, and imagine that the y-axis represents the companies performance. What the above graph shows is that _by sheer coincidence_, it's quite likely that some of the high-performing companies will adopt some trendy management technique, and that it's possible for us to observe this _even if there's literally no correlation between the management practice and the company's performance_.
+Now, imagine that the x-axis of the graph represents the extent to which a company adopts some trendy managment recommendation like Objectives and Key Results, Big Hairy Audatous Goals (BHAGs), or Jobs to Be Done, and imagine that the y-axis represents the companies' performance. What the above graph shows is that _by sheer coincidence_, it's quite likely that some of the high-performing companies will adopt some trendy management technique, and that it's _likely_ we'll observe this _even if there's literally no correlation between the management practice and the company's performance_.
 
 Because the authors only focus on a few examples, it's easy to be fooled into thinking that the exemplars' outstanding success is a good reason for adopting the managment or product strategies the author recommends. This has actually already happened with BHAGs from Jim Collins' popular book _Built to Last_. Many of the companies that were supposedly "built to last" in part because of their reliance on "big hairy audatous goals" performed considerably worse after the book's publication. The implication is that the correlation between the use of BHAGs (and the book's other recommendations) and company performance is not as strong as the authors' thought.[Footnote number:7/]
 
@@ -108,11 +108,75 @@ Statistics gives us insight into potential issues with the inferences we may dra
 
 ## Statistics for Better Forecasting
 
+Product managers have to make bets on the future. We just saw this with the above Adobe example, but if you think for a few seconds about the types of risk that product managers are charged with managing, it becomes obvious that product managers need to make these kinds of bets all the time. Product managers [emd/] [as Marty Cagan points out](https://svpg.com/four-big-risks/) [emd/] must manage risk around:
 
+[blockquote]
+1. value risk (whether customers will buy it or users will choose to use it)
+1. usability risk (whether users can figure out how to use it)
+1. feasibility risk (whether our engineers can build what we need with the time, skills and technology we have)
+1. business viability risk (whether this solution also works for the various aspects of our business)
+[/blockquote]
+
+Most of us aren't very good at making these kinds of bets. Perhaps the most famous illustration of this comes from Phillip Tetlock's 20-year study on expert political forecasts. Here's a description of the study from Daniel Kahneman in _Thinking Fast and Slow_:
+
+[blockquote]
+Tetlock interviewed 284 people who made their living "commenting or offering advice on political and economic trends"…Tetlock gathered more than 80,000 predictions…Respondents were asked to rate the probabilities of three alternative outcomes in every case: the persistence of the status quo, more of something such as political freedom or economic growth, or less of that thing.
+
+The results were devastating…people who spend their time, and earn their living, studying a particular topic produce poorer predictions than dart-throwing monkeys who would have distributed their choices evenly over the options...[Footnote number:8/]
+[/blockquote]
+
+In that same study, however, Phillip Tetlock found that there was a small group of people who were markedly better than the others at forecasting. He dubbed that group "superforecasters" and wrote [an excellent book](https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804136718&linkCode=as2&tag=philosophic0a-20&linkId=77d36f863f9583844b729258366e5de1) about what makes that group different from the others. 
+
+One of the key differences he found among those with higher forecasting ability was strong statistical thinking. More specifically, Tetlock found that superforecasters have a strong intuitive grasp of Baysian reasoning, which is a way of updating probabilistic judgments based on new information.[Footnote number:9/]
+
+I won't get into how Bayes' rule works here, but I do want to quickly walk through an exmaple that will hopefully illustrate how understanding the rule could be useful and show how counter-intuitive it is. 
+
+Suppose you're roadmapping your fitness app, and you've started to worry that [Apple's new focus on services](https://www.bloomberg.com/news/articles/2019-03-23/apple-s-reinvention-as-a-services-company-starts-for-real-monday) will lead them to start modifying their health app so that it's features compete with the ones you are offering. You're worried enough that you're considering prioritizing features that will help you fend off Apple's competitive moves over some other features that you believe could be more beneficial if Apple wasn't going to enter the market. 
+
+So you have to make bet here. Good forecasters attach probabilities to their predictions (more on why some other time or just read [Superforecasters](https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804136718&linkCode=as2&tag=philosophic0a-20&linkId=77d36f863f9583844b729258366e5de1)). You do some research, but ultimately decide that you're skeptical that Apple will actually do anything in the fitness space. A value of ".10" means you'd wager there's a 10% chance Apple starts to build a fitness-oriented service.
+
+[var name:"prior" value:`.10` /]
+
+[Range value:prior min:`.01` max:`1` step:`.01` /] 
+Initial guess about Apple's intentions (prior): [Display value:prior /]
+
+[var name: "sensitivity" value:`.80`/]
+[var name: "specificity" value:`.1`/]
+
+A few weeks after you've told your team about your skepticism, suppose a coworker pulls you aside and tells you that an Apple-savy forecaster like [Above Avalon](https://www.aboveavalon.com) has recently predicted that Apple will in fact more aggressively pursue a fitness-oriented service built on top of their fitness app. She tells you,
+
+[blockquote]
+This analyst can read Apple like a book. In the past, when Apple has made a similar move like this, there's a [Display value:`(sensitivity * 100) + "%"` /] chance that this forecaster saw it coming." (This is called "sensitivity.") You should really reconsider your position.
+[/blockquote]
+
+"With enough predictions, anyone can predict an event," you think to yourself, so you do some more research on the analyst and you find that [Display value:`(specificity * 100) + "%"`/] of the time when Apple _wasn't_ making a similar move, the analyst _incorrectly_ predicts the move was coming anyway. (This is a measure of "specificity.") Both of these pieces of information are captured in (adjustable) sliders below:
+
+[Range value:sensitivity min:`.01` max:`1` step:`.01` /] 
+(sensitivity): [Display value:sensitivity /]
+
+[Range value:specificity min:`.01` max:`1` step:`.01` /] 
+(specificity): [Display value:specificity /]
+
+Given all of this information, what probability should you assign to your new forecast?
+
+[var name:"guess" value:`.70`/]
+[Range value:guess min:`.01` max:`1` step:`.01` /] my new forecast is [Display value:guess/]
+
+[var name:"revealBayes" value:`false`/]
+[Button onClick:`revealBayes = true`]Submit[/Button]
+[Conditional if:`!revealBayes`]
+[Placeholder placeholderText:"Answer will appear here" height: "50px"/]
+[/Conditional]
+[Conditional if:`revealBayes`]
+[derived name: "updatedProbability" value: `(prior * sensitivity) / ((prior * sensitivity) + ((1 - prior) * specificity))`/]
+The correct answer is [Display value:`(Math.round(updatedProbability * 100)) + "%"`/]. Your answer is [Display value:`Math.abs(Math.round((updatedProbability - guess) * 100)) + "%"`/] off. Play around with the sliders to see how different inputs lead to a different answer.
+[/Conditional]
+[br/]
+Statistics gives us insight into how to make better product strategy bets. Being able to make the right bets for your company and product is essential to good product management.
 
 ## Conclusion and Further reading
 
-Hopefully, I've managed to convince you that statistics is _essential_ for good product management. If you're convinced and want to start studying, I recommend the following resources:
+To sum up: a strong grasp of statistics can help product managers read analytics, understand and influence organizational dynamics, and make better forecasts. Hopefully, that's enough to convince you that a strong grasp of statistics is _essential_ for good product management. If you're convinced and want to start studying, I recommend the following resources:
 
 * [Naked Statistics: Stripping the Dread from the Data](https://www.amazon.com/gp/product/039334777X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=039334777X&linkCode=as2&tag=philosophic0a-20&linkId=3f5f14d8c3827ba539aa3f813992a1d3) is a great on-the-go read and a strong overview of important stastical concepts.
 * _Open Intro Statistics_ is a great textbook on statistics, which you can find as a pdf [here](https://www.openintro.org/stat/textbook.php?stat_book=os), or, if you want a paperbook version, you can order it [here](https://www.amazon.com/gp/product/1943450048/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1943450048&linkCode=as2&tag=philosophic0a-20&linkId=40b62a5a722e5bc50720d8a228e0bcbf). The textbook has exercises which I've found extremely useful for solidifying my understanding of the concepts.
@@ -120,10 +184,12 @@ Hopefully, I've managed to convince you that statistics is _essential_ for good 
 
 ## Notes
 
-1. _Inspired: How to build tech products users love_, Marty Cagan, 51.
+1. Marty Cagan, [Inspired: How to build tech products users love](https://www.amazon.com/gp/product/1119387507/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1119387507&linkCode=as2&tag=philosophic0a-20&linkId=b573139d50e5577ae682547322e58ed1), 51.
 1. The interactivity is powered by [Idyll](https://idyll-lang.org/), a markdown-like language for creating interactive articles.
 1. This is actually a cohort analysis of weekly retention on my blog. Apparently, my writing isn't that interesting. 😉
 1. Fabric’s graph looks a little different and it only tracks retention, but its still a cohort analysis.
-1. Eric Reis, The Lean Startup, 140-141
-1. _Inspired: How to build tech products users love_, Marty Cagan, 39.
+1. Eric Reis, _The Lean Startup_, 140-141.
+1. Marty Cagan, [Inspired: How to build tech products users love](https://www.amazon.com/gp/product/1119387507/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1119387507&linkCode=as2&tag=philosophic0a-20&linkId=b573139d50e5577ae682547322e58ed1), 39.
 1. Daniel Kahneman, _Thinking Fast and Slow_, under the section called "Recipes for Success."
+1. Ibid., under “The Illusions of Pundits.”
+1. Phillip Tetlock and Dan Gardner, [Superforecasters: the art and science of prediction](https://www.amazon.com/gp/product/0804136718/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0804136718&linkCode=as2&tag=philosophic0a-20&linkId=77d36f863f9583844b729258366e5de1), 172.

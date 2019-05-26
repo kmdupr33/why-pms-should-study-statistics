@@ -13,7 +13,6 @@ class Cohort extends React.PureComponent {
     };
     newItem[prefix + feature] = ".50";
     data.push(newItem);
-    console.log(feature);
     if (!shippedFeature)
       return (
         <Placeholder height="105px" placeholderText="Your analytics will appear here" />
