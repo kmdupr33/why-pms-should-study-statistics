@@ -22,7 +22,13 @@ Data is the sword of the 21st century, those who wield it are the samurai.
 
 [span className:"drop"]M[/span]arty Cagan [emd/] seasoned product manager and author of a book and blog that makes practically every recommended reading list for new product managers [emd/] says that there are two academic courses that "every product manager should take": finance and computer science.[Footnote number:1/] In this essay, I suggest we add another course to this list: statistics. A strong understanding of statistics facilitates three key responsibilities of product managment: understanding analytics, implementing cooprorate change, and making accurate forecasts.
 
-To drive home the importance of statistics in understanding analytics, we'll look at how standard cohort analyses [emd/] a technique hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake. Next, we'll look at how weak statisical thinking [emd/] along with naive readings of commonly recommended product managment books like Jim Collins' _Built to Last_ [emd/] can lead to bad inferences about how and when to implement cooprorate change. Finally, we'll look at how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and competitor product moves.
+To drive home the importance of statistics in understanding analytics, we'll look at how
+
+* how standard cohort analyses [emd/] a technique hailed as "scientific" and "data-driven" [emd/] can still lead to bad product decisions and how a strong understanding of statistics can help us avoid this mistake
+* how weak statisical thinking [emd/] along with naive readings of commonly recommended product managment books like Jim Collins' _Built to Last_ [emd/] can lead to bad inferences about how and when to implement cooprorate change
+* how a strong grasp of statistics can help product managers make better forecasts about things like consumer behavior trends and competitor product moves 
+
+I'll conclude with some resource recommendations that have helped me sharpen my understanding of statistics.
 
 Statistics can be tedious, so I've tried to add some interactivity into this essay to make things more interesting and digestable.[Footnote number:2/]
 
